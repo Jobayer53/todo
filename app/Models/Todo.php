@@ -9,10 +9,7 @@ class Todo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['title', 'description', 'image'];
 
-    public function scopeGetSerialNumber($query, $id)
-    {
-        return $query->where('id', $id)->value('serial_number');
-    }
+
 }
